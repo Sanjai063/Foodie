@@ -1,0 +1,802 @@
+[
+  {
+    "name": "Classic Margherita Pizza",
+    "categoryName": "Pizza",
+    "description": "San Marzano tomato sauce, fresh buffalo mozzarella, fresh basil leaves, and extra virgin olive oil on hand-tossed sourdough.",
+    "price": 299,
+    "image": "/images/foods/1-classic-margherita-pizza.jpg",
+    "ingredients": [
+      "Mozzarella Cheese",
+      "San Marzano Sauce",
+      "Fresh Basil",
+      "Olive Oil",
+      "Sourdough Crust"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Mild",
+    "prepTime": "20 mins",
+    "calories": 420,
+    "rating": 4.8,
+    "numReviews": 4,
+    "available": true
+  },
+  {
+    "name": "Spicy Paneer Tikka Pizza",
+    "categoryName": "Pizza",
+    "description": "Spiced tandoori paneer cubes, crunchy bell peppers, red onion, mozzarella, and drizzle of creamy mint sauce.",
+    "price": 349,
+    "image": "/images/foods/2-spicy-paneer-tikka-pizza.jpg",
+    "ingredients": [
+      "Tandoori Paneer",
+      "Mozzarella",
+      "Capsicum",
+      "Red Onions",
+      "Mint Chutney"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Spicy",
+    "prepTime": "22 mins",
+    "calories": 510,
+    "rating": 4.7,
+    "numReviews": 2,
+    "available": true
+  },
+  {
+    "name": "Farmhouse Garden Fresh Pizza",
+    "categoryName": "Pizza",
+    "description": "Loaded with crunchy golden corn, sliced mushrooms, black olives, jalapenos, and melted triple cheddar.",
+    "price": 369,
+    "image": "/images/foods/3-farmhouse-garden-fresh-pizza.jpg",
+    "ingredients": [
+      "Golden Corn",
+      "Button Mushrooms",
+      "Black Olives",
+      "Jalapenos",
+      "Triple Cheddar"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Medium",
+    "prepTime": "20 mins",
+    "calories": 460,
+    "rating": 4.6,
+    "numReviews": 3,
+    "available": true
+  },
+  {
+    "name": "Smoky BBQ Chicken & Onion Pizza",
+    "categoryName": "Pizza",
+    "description": "Charred chicken breast tossed in sweet and smoky hickory BBQ sauce, topped with caramelized red onions and gouda cheese.",
+    "price": 399,
+    "image": "/images/foods/4-smoky-bbq-chicken-onion-pizza.jpg",
+    "ingredients": [
+      "Hickory BBQ Chicken",
+      "Caramelized Onions",
+      "Gouda Cheese",
+      "Smoked Paprika"
+    ],
+    "isVeg": false,
+    "spiceLevel": "Medium",
+    "prepTime": "25 mins",
+    "calories": 590,
+    "rating": 4.9,
+    "numReviews": 5,
+    "available": true
+  },
+  {
+    "name": "Crispy Veggie Crunch Burger",
+    "categoryName": "Burger",
+    "description": "Crispy herb potato patty topped with melted cheddar, pickled gherkins, fresh lettuce, and house secret sauce.",
+    "price": 189,
+    "image": "/images/foods/5-crispy-veggie-crunch-burger.jpg",
+    "ingredients": [
+      "Veggie Herb Patty",
+      "Cheddar Cheese",
+      "Brioche Bun",
+      "Pickles",
+      "Secret Sauce"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Medium",
+    "prepTime": "15 mins",
+    "calories": 380,
+    "rating": 4.6,
+    "numReviews": 3,
+    "available": true
+  },
+  {
+    "name": "Smoky BBQ Paneer Burger",
+    "categoryName": "Burger",
+    "description": "Char-grilled cottage cheese steak basted in smoky barbecue glaze with caramelized onions in toasted sesame brioche.",
+    "price": 229,
+    "image": "/images/foods/6-smoky-bbq-paneer-burger.jpg",
+    "ingredients": [
+      "BBQ Paneer Steak",
+      "Caramelized Onions",
+      "Smoky Mayo",
+      "Sesame Bun"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Medium",
+    "prepTime": "18 mins",
+    "calories": 450,
+    "rating": 4.5,
+    "numReviews": 1,
+    "available": true
+  },
+  {
+    "name": "Classic Grilled Chicken Cheeseburger",
+    "categoryName": "Burger",
+    "description": "Juicy herb-marinated grilled chicken breast topped with melted yellow American cheese, tomato slices, and garlic aioli.",
+    "price": 249,
+    "image": "/images/foods/7-classic-grilled-chicken-cheeseburger.jpg",
+    "ingredients": [
+      "Grilled Chicken Breast",
+      "American Cheese",
+      "Garlic Herb Aioli",
+      "Brioche Bun"
+    ],
+    "isVeg": false,
+    "spiceLevel": "Medium",
+    "prepTime": "20 mins",
+    "calories": 520,
+    "rating": 4.8,
+    "numReviews": 4,
+    "available": true
+  },
+  {
+    "name": "Royal Hyderabadi Dum Paneer Biryani",
+    "categoryName": "Biryani",
+    "description": "Aged basmati rice infused with Kashmiri saffron, mint, and marinated paneer cubes slow-cooked in a sealed handi.",
+    "price": 320,
+    "image": "/images/foods/8-royal-hyderabadi-dum-paneer-biryani.jpg",
+    "ingredients": [
+      "Aged Basmati Rice",
+      "Saffron Milk",
+      "Marinated Paneer",
+      "Birista Fried Onions",
+      "Spiced Raita"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Medium",
+    "prepTime": "25 mins",
+    "calories": 580,
+    "rating": 4.9,
+    "numReviews": 5,
+    "available": true
+  },
+  {
+    "name": "Hyderabadi Chicken Dum Biryani",
+    "categoryName": "Biryani",
+    "description": "Authentic Nawabi style slow-steamed biryani with succulent bone-in chicken thighs, whole spices, saffron, and fresh mint.",
+    "price": 360,
+    "image": "/images/foods/9-hyderabadi-chicken-dum-biryani.jpg",
+    "ingredients": [
+      "Tender Chicken",
+      "Basmati Rice",
+      "Ghee",
+      "Whole Cardamom",
+      "Mirchi Ka Salan"
+    ],
+    "isVeg": false,
+    "spiceLevel": "Spicy",
+    "prepTime": "30 mins",
+    "calories": 650,
+    "rating": 4.9,
+    "numReviews": 8,
+    "available": true
+  },
+  {
+    "name": "Lucknowi Awadhi Mutton Biryani",
+    "categoryName": "Biryani",
+    "description": "Delicately scented dum biryani prepared in the fragrant Awadhi royal tradition with melt-in-mouth tender mutton and kewra.",
+    "price": 440,
+    "image": "/images/foods/10-lucknowi-awadhi-mutton-biryani.jpg",
+    "ingredients": [
+      "Slow-Cooked Mutton",
+      "Kewra Water",
+      "Desi Ghee",
+      "Burani Raita"
+    ],
+    "isVeg": false,
+    "spiceLevel": "Medium",
+    "prepTime": "30 mins",
+    "calories": 710,
+    "rating": 4.8,
+    "numReviews": 3,
+    "available": true
+  },
+  {
+    "name": "Paneer Butter Masala",
+    "categoryName": "North Indian",
+    "description": "Cubes of fresh cottage cheese simmered in a velvety, buttery tomato cashew gravy finished with kasuri methi and fresh cream.",
+    "price": 260,
+    "image": "/images/foods/11-paneer-butter-masala.jpg",
+    "ingredients": [
+      "Fresh Paneer",
+      "Butter",
+      "Cashew Paste",
+      "Tomato Puree",
+      "Kasuri Methi"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Mild",
+    "prepTime": "20 mins",
+    "calories": 420,
+    "rating": 4.9,
+    "numReviews": 6,
+    "available": true
+  },
+  {
+    "name": "Dal Makhani & Garlic Butter Naan",
+    "categoryName": "North Indian",
+    "description": "Overnight slow-cooked black lentils simmered with cream and butter, paired with two fluffy tandoori garlic butter naans.",
+    "price": 240,
+    "image": "/images/foods/12-dal-makhani-garlic-butter-naan.jpg",
+    "ingredients": [
+      "Black Urad Dal",
+      "Butter Naan",
+      "White Butter",
+      "Garlic",
+      "Heavy Cream"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Mild",
+    "prepTime": "20 mins",
+    "calories": 490,
+    "rating": 4.7,
+    "numReviews": 3,
+    "available": true
+  },
+  {
+    "name": "Amritsari Chole Bhature Combo",
+    "categoryName": "North Indian",
+    "description": "Spicy, tangy dark chickpeas cooked in authentic Punjabi spices, served with two giant piping hot fluffy bhaturas and pickled onions.",
+    "price": 210,
+    "image": "/images/foods/13-amritsari-chole-bhature-combo.jpg",
+    "ingredients": [
+      "Kabuli Chana",
+      "Puffed Bhature",
+      "Anardana",
+      "Green Chillies",
+      "Pickled Onions"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Spicy",
+    "prepTime": "18 mins",
+    "calories": 580,
+    "rating": 4.8,
+    "numReviews": 4,
+    "available": true
+  },
+  {
+    "name": "Murgh Makhani (Butter Chicken)",
+    "categoryName": "North Indian",
+    "description": "Tandoori roasted chicken pieces simmered in silky tomato, honey, and cashew gravy with rich swirls of butter and cream.",
+    "price": 330,
+    "image": "/images/foods/14-murgh-makhani-butter-chicken.jpg",
+    "ingredients": [
+      "Tandoori Chicken Tikka",
+      "Tomato Gravy",
+      "Pure Butter",
+      "Fresh Cream",
+      "Honey"
+    ],
+    "isVeg": false,
+    "spiceLevel": "Medium",
+    "prepTime": "25 mins",
+    "calories": 610,
+    "rating": 4.9,
+    "numReviews": 9,
+    "available": true
+  },
+  {
+    "name": "Crispy Mysore Masala Dosa",
+    "categoryName": "South Indian",
+    "description": "Crispy fermented crepe smeared with spicy red garlic-chilli chutney, stuffed with spiced potato masala and served with hot drumstick sambar.",
+    "price": 160,
+    "image": "/images/foods/15-crispy-mysore-masala-dosa.jpg",
+    "ingredients": [
+      "Rice & Lentil Batter",
+      "Potato Masala",
+      "Red Garlic Chutney",
+      "Coconut Chutney",
+      "Sambar"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Medium",
+    "prepTime": "15 mins",
+    "calories": 340,
+    "rating": 4.8,
+    "numReviews": 5,
+    "available": true
+  },
+  {
+    "name": "Steamed Idli & Medu Vada Combo",
+    "categoryName": "South Indian",
+    "description": "Two pillow-soft steamed rice idlis and one crispy golden medu vada, served with traditional coconut and tomato chutneys and aromatic sambar.",
+    "price": 130,
+    "image": "/images/foods/16-steamed-idli-medu-vada-combo.jpg",
+    "ingredients": [
+      "Steamed Idli",
+      "Crispy Medu Vada",
+      "Fresh Coconut Chutney",
+      "Hot Dal Sambar"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Mild",
+    "prepTime": "10 mins",
+    "calories": 280,
+    "rating": 4.7,
+    "numReviews": 3,
+    "available": true
+  },
+  {
+    "name": "Pure Ghee Paper Roast Dosa",
+    "categoryName": "South Indian",
+    "description": "Wafer-thin, golden crispy super-long dosa basted generously with pure golden cow ghee, served with three signature chutneys.",
+    "price": 170,
+    "image": "/images/foods/17-pure-ghee-paper-roast-dosa.jpg",
+    "ingredients": [
+      "Fermented Batter",
+      "Pure Desi Ghee",
+      "Sambar",
+      "Mint & Coconut Dip"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Mild",
+    "prepTime": "12 mins",
+    "calories": 310,
+    "rating": 4.8,
+    "numReviews": 2,
+    "available": true
+  },
+  {
+    "name": "Onion & Tomato Podi Uttapam",
+    "categoryName": "South Indian",
+    "description": "Thick, fluffy South Indian pancake topped with caramelized red onions, juicy diced tomatoes, and aromatic spicy gunpowder podi.",
+    "price": 150,
+    "image": "/images/foods/18-onion-tomato-podi-uttapam.jpg",
+    "ingredients": [
+      "Uttapam Batter",
+      "Finely Diced Onions",
+      "Juicy Tomatoes",
+      "Idli Podi Ghee"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Medium",
+    "prepTime": "15 mins",
+    "calories": 320,
+    "rating": 4.6,
+    "numReviews": 2,
+    "available": true
+  },
+  {
+    "name": "Schezwan Hakka Noodles",
+    "categoryName": "Chinese",
+    "description": "Wok-tossed long wheat noodles stir-fried with crunchy julienned vegetables, spring onions, and fiery spicy Schezwan sauce.",
+    "price": 199,
+    "image": "/images/foods/19-schezwan-hakka-noodles.jpg",
+    "ingredients": [
+      "Hakka Noodles",
+      "Sichuan Peppers",
+      "Bell Peppers",
+      "Cabbage",
+      "Spring Onions"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Spicy",
+    "prepTime": "15 mins",
+    "calories": 390,
+    "rating": 4.6,
+    "numReviews": 2,
+    "available": true
+  },
+  {
+    "name": "Crispy Veg Manchurian Gravy",
+    "categoryName": "Chinese",
+    "description": "Crispy golden fried vegetable dumplings coated in a dark, glossy, tangy garlic-soy sauce with fresh scallions.",
+    "price": 219,
+    "image": "/images/foods/20-crispy-veg-manchurian-gravy.jpg",
+    "ingredients": [
+      "Minced Veggie Balls",
+      "Dark Soy Sauce",
+      "Ginger",
+      "Green Chilies",
+      "Scallions"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Medium",
+    "prepTime": "18 mins",
+    "calories": 340,
+    "rating": 4.5,
+    "numReviews": 1,
+    "available": true
+  },
+  {
+    "name": "Steamed Veg Dim Sums (Momos)",
+    "categoryName": "Chinese",
+    "description": "Translucent steamed Tibetan dumplings packed with finely minced crunchy vegetables and served with fiery red chili garlic dip.",
+    "price": 169,
+    "image": "/images/foods/21-steamed-veg-dim-sums-momos.jpg",
+    "ingredients": [
+      "Minced Veggies",
+      "Dim Sum Wrappers",
+      "Spicy Sesame Dip",
+      "Garlic Oil"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Medium",
+    "prepTime": "15 mins",
+    "calories": 260,
+    "rating": 4.7,
+    "numReviews": 3,
+    "available": true
+  },
+  {
+    "name": "Wok Chilli Garlic Fried Rice",
+    "categoryName": "Chinese",
+    "description": "Fragrant jasmine rice tossed on high flame with burnt garlic flakes, red hot peppers, and crunchy seasonal vegetables.",
+    "price": 189,
+    "image": "/images/foods/22-wok-chilli-garlic-fried-rice.jpg",
+    "ingredients": [
+      "Jasmine Rice",
+      "Burnt Garlic Flakes",
+      "Chilli Oil",
+      "Spring Greens"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Spicy",
+    "prepTime": "15 mins",
+    "calories": 410,
+    "rating": 4.6,
+    "numReviews": 2,
+    "available": true
+  },
+  {
+    "name": "Creamy Alfredo White Sauce Penne",
+    "categoryName": "Italian",
+    "description": "Al dente penne pasta bathed in rich Parmesan garlic cream sauce with sauteed button mushrooms and sweet baby corn.",
+    "price": 259,
+    "image": "/images/foods/23-creamy-alfredo-white-sauce-penne.jpg",
+    "ingredients": [
+      "Penne Pasta",
+      "Parmesan Cheese",
+      "Garlic Cream Sauce",
+      "Button Mushrooms",
+      "Herbs"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Mild",
+    "prepTime": "18 mins",
+    "calories": 470,
+    "rating": 4.8,
+    "numReviews": 4,
+    "available": true
+  },
+  {
+    "name": "Fiery Arrabbiata Red Sauce Pasta",
+    "categoryName": "Italian",
+    "description": "Tuscan penne cooked in spicy garlic-infused Italian plum tomato sauce with crushed red pepper flakes and fresh basil.",
+    "price": 249,
+    "image": "/images/foods/24-fiery-arrabbiata-red-sauce-pasta.jpg",
+    "ingredients": [
+      "Penne Pasta",
+      "Plum Tomatoes",
+      "Red Chilli Flakes",
+      "Garlic",
+      "Extra Virgin Olive Oil"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Spicy",
+    "prepTime": "18 mins",
+    "calories": 410,
+    "rating": 4.7,
+    "numReviews": 2,
+    "available": true
+  },
+  {
+    "name": "Cheesy Pull-Apart Garlic Bread",
+    "categoryName": "Italian",
+    "description": "Toasted baguette slices drenched in roasted garlic butter and blanketed with hot melted bubbling mozzarella cheese.",
+    "price": 159,
+    "image": "/images/foods/25-cheesy-pull-apart-garlic-bread.jpg",
+    "ingredients": [
+      "Artisan Baguette",
+      "Roasted Garlic Butter",
+      "Mozzarella Cheese",
+      "Oregano Herbs"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Mild",
+    "prepTime": "12 mins",
+    "calories": 320,
+    "rating": 4.9,
+    "numReviews": 5,
+    "available": true
+  },
+  {
+    "name": "Cheesy Peri-Peri Loaded Fries",
+    "categoryName": "Snacks & Street Food",
+    "description": "Golden crispy skin-on french fries generously dusted with spicy African peri-peri seasoning and drenched in warm melted cheddar.",
+    "price": 159,
+    "image": "/images/foods/26-cheesy-peri-peri-loaded-fries.jpg",
+    "ingredients": [
+      "Potato Fries",
+      "Peri-Peri Spice",
+      "Liquid Cheddar",
+      "Jalapenos"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Spicy",
+    "prepTime": "10 mins",
+    "calories": 340,
+    "rating": 4.8,
+    "numReviews": 4,
+    "available": true
+  },
+  {
+    "name": "Mumbai Special Pav Bhaji",
+    "categoryName": "Snacks & Street Food",
+    "description": "Spiced mash of mixed vegetables slow-simmered on a giant tawa with secret spices, served with two butter-toasted pavs and lime.",
+    "price": 179,
+    "image": "/images/foods/27-mumbai-special-pav-bhaji.jpg",
+    "ingredients": [
+      "Spiced Veggie Mash",
+      "Amul Butter",
+      "Toasted Pav",
+      "Chopped Onions",
+      "Fresh Lemon"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Spicy",
+    "prepTime": "15 mins",
+    "calories": 430,
+    "rating": 4.8,
+    "numReviews": 5,
+    "available": true
+  },
+  {
+    "name": "Dahi Puri & Chaat Platter",
+    "categoryName": "Snacks & Street Food",
+    "description": "Crispy hollow puris filled with potatoes, spiced sprouts, sweetened yoghurt, tamarind chutney, and fine crispy sev.",
+    "price": 149,
+    "image": "/images/foods/28-dahi-puri-chaat-platter.jpg",
+    "ingredients": [
+      "Crispy Puris",
+      "Chilled Sweet Dahi",
+      "Saunth Tamarind Chutney",
+      "Nylon Sev",
+      "Pomegranate"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Medium",
+    "prepTime": "10 mins",
+    "calories": 290,
+    "rating": 4.7,
+    "numReviews": 3,
+    "available": true
+  },
+  {
+    "name": "Crispy Punjabi Samosas (2 Pcs)",
+    "categoryName": "Snacks & Street Food",
+    "description": "Flaky deep-fried triangular pastries loaded with spiced potatoes, green peas, cashews, served with mint and date chutneys.",
+    "price": 89,
+    "image": "/images/foods/29-crispy-punjabi-samosas-2-pcs.jpg",
+    "ingredients": [
+      "Flaky Pastry",
+      "Spiced Potato Masala",
+      "Green Peas",
+      "Mint Chutney"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Medium",
+    "prepTime": "10 mins",
+    "calories": 280,
+    "rating": 4.6,
+    "numReviews": 4,
+    "available": true
+  },
+  {
+    "name": "Mediterranean Greek Feta Salad",
+    "categoryName": "Healthy & Salads",
+    "description": "Crisp English cucumbers, vine-ripened cherry tomatoes, Kalamata olives, and crumbly feta cheese tossed in oregano lemon vinaigrette.",
+    "price": 219,
+    "image": "/images/foods/30-mediterranean-greek-feta-salad.jpg",
+    "ingredients": [
+      "Feta Cheese",
+      "Cherry Tomatoes",
+      "English Cucumbers",
+      "Kalamata Olives",
+      "Lemon Vinaigrette"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Mild",
+    "prepTime": "10 mins",
+    "calories": 210,
+    "rating": 4.7,
+    "numReviews": 2,
+    "available": true
+  },
+  {
+    "name": "High-Protein Quinoa & Roasted Veg Bowl",
+    "categoryName": "Healthy & Salads",
+    "description": "Fluffy organic white quinoa layered with roasted sweet potatoes, edamame, baby spinach, avocado, and tahini dressing.",
+    "price": 269,
+    "image": "/images/foods/31-high-protein-quinoa-roasted-veg-bowl.jpg",
+    "ingredients": [
+      "Organic Quinoa",
+      "Roasted Sweet Potatoes",
+      "Edamame",
+      "Avocado",
+      "Creamy Tahini"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Mild",
+    "prepTime": "12 mins",
+    "calories": 290,
+    "rating": 4.9,
+    "numReviews": 3,
+    "available": true
+  },
+  {
+    "name": "Molten Chocolate Lava Cake",
+    "categoryName": "Desserts",
+    "description": "Warm, rich dark chocolate cake with a molten truffle center that flows out, accompanied by vanilla bean ice cream.",
+    "price": 199,
+    "image": "/images/foods/32-molten-chocolate-lava-cake.jpg",
+    "ingredients": [
+      "Belgian Dark Chocolate",
+      "Butter",
+      "Vanilla Ice Cream",
+      "Cocoa Powder"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Mild",
+    "prepTime": "10 mins",
+    "calories": 390,
+    "rating": 4.9,
+    "numReviews": 6,
+    "available": true
+  },
+  {
+    "name": "Gulab Jamun with Creamy Rabri",
+    "categoryName": "Desserts",
+    "description": "Two hot, melt-in-the-mouth khoya gulab jamuns soaked in saffron cardamom syrup and served on a bed of chilled creamy rabri.",
+    "price": 149,
+    "image": "/images/foods/33-gulab-jamun-with-creamy-rabri.jpg",
+    "ingredients": [
+      "Khoya Mawa",
+      "Cardamom Sugar Syrup",
+      "Chilled Rabri",
+      "Pistachio Flakes"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Mild",
+    "prepTime": "10 mins",
+    "calories": 340,
+    "rating": 4.9,
+    "numReviews": 5,
+    "available": true
+  },
+  {
+    "name": "Royal Kesar Pista Rasmalai (2 Pcs)",
+    "categoryName": "Desserts",
+    "description": "Spongy cottage cheese patties poached in sweetened, saffron-cardamom flavored thickened milk garnished with chopped almonds and pistachios.",
+    "price": 169,
+    "image": "/images/foods/34-royal-kesar-pista-rasmalai-2-pcs.jpg",
+    "ingredients": [
+      "Chhena Patties",
+      "Saffron Infused Milk",
+      "Cardamom",
+      "Almond Flakes"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Mild",
+    "prepTime": "8 mins",
+    "calories": 260,
+    "rating": 4.8,
+    "numReviews": 4,
+    "available": true
+  },
+  {
+    "name": "New York Baked Cheesecake",
+    "categoryName": "Desserts",
+    "description": "Classic velvety cream cheese slice baked on a buttery graham cracker crust with a dollop of wild berry compote.",
+    "price": 229,
+    "image": "/images/foods/35-new-york-baked-cheesecake.jpg",
+    "ingredients": [
+      "Philadelphia Cream Cheese",
+      "Graham Cracker Crust",
+      "Berry Compote",
+      "Pure Cream"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Mild",
+    "prepTime": "8 mins",
+    "calories": 410,
+    "rating": 4.9,
+    "numReviews": 3,
+    "available": true
+  },
+  {
+    "name": "Belgian Chocolate Milkshake",
+    "categoryName": "Beverages",
+    "description": "Ultra-thick creamy milkshake crafted with real Belgian dark chocolate ganache, vanilla ice cream, and chocolate whipped swirl.",
+    "price": 169,
+    "image": "/images/foods/36-belgian-chocolate-milkshake.jpg",
+    "ingredients": [
+      "Belgian Chocolate",
+      "Whole Milk",
+      "Vanilla Ice Cream",
+      "Chocolate Curls"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Mild",
+    "prepTime": "8 mins",
+    "calories": 380,
+    "rating": 4.8,
+    "numReviews": 3,
+    "available": true
+  },
+  {
+    "name": "Virgin Mojito Mint Cooler",
+    "categoryName": "Beverages",
+    "description": "Refreshing thirst-quenching cooler muddled with fresh mint sprigs, lime wedges, simple cane syrup, and sparkling fizz.",
+    "price": 129,
+    "image": "/images/foods/37-virgin-mojito-mint-cooler.jpg",
+    "ingredients": [
+      "Fresh Mint",
+      "Lime Juice",
+      "Cane Sugar",
+      "Club Soda",
+      "Crushed Ice"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Mild",
+    "prepTime": "5 mins",
+    "calories": 140,
+    "rating": 4.6,
+    "numReviews": 2,
+    "available": true
+  },
+  {
+    "name": "Iced Caramel Frappe Coffee",
+    "categoryName": "Beverages",
+    "description": "Bold espresso blended with chilled milk and ice, topped with sweet salted caramel drizzle and whipped cream.",
+    "price": 179,
+    "image": "/images/foods/38-iced-caramel-frappe-coffee.jpg",
+    "ingredients": [
+      "Double Shot Espresso",
+      "Caramel Drizzle",
+      "Cold Milk",
+      "Ice"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Mild",
+    "prepTime": "5 mins",
+    "calories": 220,
+    "rating": 4.8,
+    "numReviews": 3,
+    "available": true
+  },
+  {
+    "name": "Chilled Kesar Mango Lassi",
+    "categoryName": "Beverages",
+    "description": "Traditional Punjabi sweet lassi churned with thick creamy curd and pure Alphonso mango pulp scented with cardamom.",
+    "price": 139,
+    "image": "/images/foods/39-chilled-kesar-mango-lassi.jpg",
+    "ingredients": [
+      "Thick Curd",
+      "Alphonso Mango Pulp",
+      "Saffron Strands",
+      "Cardamom Powder"
+    ],
+    "isVeg": true,
+    "spiceLevel": "Mild",
+    "prepTime": "5 mins",
+    "calories": 260,
+    "rating": 4.9,
+    "numReviews": 4,
+    "available": true
+  }
+]

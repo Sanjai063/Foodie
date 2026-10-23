@@ -1,0 +1,1305 @@
+/* ==========================================================================
+   ONLINE FOOD ORDERING SYSTEM - MODERN CSS
+   A modern, vibrant, responsive UI styled for a real-world food delivery app
+   ========================================================================== */
+
+:root {
+  --primary-color: #ff4757;
+  --primary-hover: #e84118;
+  --primary-light: rgba(255, 71, 87, 0.1);
+  --secondary-color: #ffa502;
+  --secondary-hover: #e59400;
+  --success-color: #2ed573;
+  --danger-color: #ff4757;
+  --warning-color: #ffa502;
+  --info-color: #1e90ff;
+  --dark-color: #2f3542;
+  --gray-dark: #57606f;
+  --gray-light: #a4b0be;
+  --bg-light: #f5f7fb;
+  --card-bg: rgba(255, 255, 255, 0.82);
+  --border-color: rgba(255, 255, 255, 0.65);
+  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 28px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 18px 40px rgba(0, 0, 0, 0.12);
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-pill: 50px;
+  --font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --transition: all 0.25s cubic-bezier(0.2, 0.8, 0.4, 1);
+
+  /* Liquid Glassmorphism Tokens */
+  --glass-bg: rgba(255, 255, 255, 0.74);
+  --glass-bg-solid: rgba(255, 255, 255, 0.88);
+  --glass-border: rgba(255, 255, 255, 0.72);
+  --glass-border-subtle: rgba(255, 255, 255, 0.4);
+  --glass-blur: blur(18px) saturate(180%);
+  --glass-blur-deep: blur(25px) saturate(200%);
+  --glass-shadow: 0 12px 36px 0 rgba(31, 38, 135, 0.07), inset 0 1px 1px 0 rgba(255, 255, 255, 0.9);
+  --glass-shadow-hover: 0 20px 48px -10px rgba(255, 71, 87, 0.25), 0 10px 24px rgba(0, 0, 0, 0.06), inset 0 1px 2px 0 rgba(255, 255, 255, 0.95);
+  --3d-shadow: 0 25px 50px -12px rgba(255, 71, 87, 0.25), 0 10px 20px -5px rgba(0, 0, 0, 0.08);
+  --liquid-sheen: linear-gradient(115deg, transparent 20%, rgba(255, 255, 255, 0.35) 45%, rgba(255, 255, 255, 0.75) 50%, rgba(255, 255, 255, 0.35) 55%, transparent 75%);
+}
+
+/* Ambient Liquid Fluid Orbs (refract through liquid glass) */
+.liquid-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.liquid-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(85px);
+  opacity: 0.38;
+  mix-blend-mode: normal;
+  animation: floatOrb 22s ease-in-out infinite alternate;
+}
+
+.liquid-orb-1 {
+  width: 500px;
+  height: 500px;
+  top: -120px;
+  left: -100px;
+  background: radial-gradient(circle, #ff6b81 0%, #ff4757 70%, transparent 100%);
+  animation-duration: 20s;
+}
+
+.liquid-orb-2 {
+  width: 550px;
+  height: 550px;
+  top: 35%;
+  right: -150px;
+  background: radial-gradient(circle, #ffa502 0%, #ff7f50 70%, transparent 100%);
+  animation-duration: 26s;
+  animation-delay: -5s;
+}
+
+.liquid-orb-3 {
+  width: 450px;
+  height: 450px;
+  bottom: -100px;
+  left: 20%;
+  background: radial-gradient(circle, #70a1ff 0%, #1e90ff 70%, transparent 100%);
+  animation-duration: 24s;
+  animation-delay: -10s;
+}
+
+@keyframes floatOrb {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  33% { transform: translate(70px, 80px) scale(1.12) rotate(120deg); }
+  66% { transform: translate(-60px, 50px) scale(0.92) rotate(240deg); }
+  100% { transform: translate(50px, -70px) scale(1.08) rotate(360deg); }
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-light);
+  color: var(--dark-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Typography & General */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+/* Buttons - 3D Tactile Glass Style */
+.btn-primary {
+  background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  color: #fff !important;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  padding: 0.55rem 1.4rem;
+  transition: var(--transition);
+  box-shadow: 0 6px 18px rgba(255, 71, 87, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: 0.5s;
+}
+
+.btn-primary:hover::after {
+  left: 100%;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background: linear-gradient(135deg, #e84118 0%, #ff4757 100%) !important;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 24px rgba(255, 71, 87, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.btn-primary:active {
+  transform: translateY(2px) scale(0.97);
+  box-shadow: 0 3px 10px rgba(255, 71, 87, 0.3), inset 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color) !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1.5px solid rgba(255, 71, 87, 0.6) !important;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  padding: 0.55rem 1.4rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(255, 71, 87, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+.btn-outline-primary:hover {
+  background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%) !important;
+  color: #fff !important;
+  border-color: transparent !important;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(255, 71, 87, 0.35);
+}
+
+.btn-outline-primary:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.btn-pill {
+  border-radius: var(--radius-pill);
+}
+
+/* Navbar - Floating Liquid Glass */
+.navbar {
+  background: var(--glass-bg) !important;
+  backdrop-filter: var(--glass-blur) !important;
+  -webkit-backdrop-filter: var(--glass-blur) !important;
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  padding: 0.85rem 0;
+  z-index: 1000;
+  transition: var(--transition);
+}
+
+.navbar-brand {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--primary-color) !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-shadow: 0 2px 10px rgba(255, 71, 87, 0.2);
+}
+
+.nav-link {
+  font-weight: 600;
+  color: var(--gray-dark) !important;
+  padding: 0.5rem 1.1rem !important;
+  border-radius: var(--radius-pill);
+  transition: var(--transition);
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--primary-color) !important;
+  background: rgba(255, 71, 87, 0.12);
+  backdrop-filter: blur(8px);
+  transform: translateY(-1px);
+}
+
+/* Cart Icon with badge */
+.cart-badge-container {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-count-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: linear-gradient(135deg, #ff4757, #ff6b81);
+  color: #fff;
+  border-radius: 50%;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: 0 4px 10px rgba(255, 71, 87, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  border: 2px solid #fff;
+}
+
+/* Hero Section with Liquid Glass Atmosphere */
+.hero-section {
+  background: linear-gradient(135deg, rgba(255, 247, 246, 0.85) 0%, rgba(255, 240, 237, 0.7) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 5rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.hero-title {
+  font-size: 3.4rem;
+  font-weight: 850;
+  line-height: 1.15;
+  color: #1e272e;
+  letter-spacing: -0.5px;
+}
+
+.hero-title span {
+  background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.18rem;
+  color: var(--gray-dark);
+  margin: 1.5rem 0 2rem;
+  line-height: 1.6;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  color: var(--primary-color);
+  padding: 0.45rem 1.2rem;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 0.85rem;
+  box-shadow: 0 6px 18px rgba(255, 71, 87, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.4rem;
+}
+
+.hero-img-wrap {
+  position: relative;
+  text-align: center;
+  perspective: 1200px;
+}
+
+.hero-img {
+  max-width: 90%;
+  border-radius: 28px;
+  box-shadow: 0 25px 60px -15px rgba(255, 71, 87, 0.35), 0 15px 35px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.9);
+  transition: transform 0.5s ease;
+}
+
+.hero-img-wrap:hover .hero-img {
+  transform: scale(1.02) rotateY(-3deg) rotateX(2deg);
+}
+
+/* 3D Liquid Glass Floating Cards */
+.hero-floating-card {
+  position: absolute;
+  background: var(--glass-bg-solid);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  padding: 0.85rem 1.35rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--glass-shadow-hover);
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  animation: floatUpDown 3.5s ease-in-out infinite alternate;
+  z-index: 5;
+  transform-style: preserve-3d;
+}
+
+.floating-1 {
+  bottom: 25px;
+  left: -10px;
+}
+
+.floating-2 {
+  top: 30px;
+  right: 0px;
+  animation-delay: -1.8s;
+}
+
+@keyframes floatUpDown {
+  0% { transform: translateY(0) translateZ(20px); }
+  100% { transform: translateY(-12px) translateZ(35px); }
+}
+
+/* ==========================================================================
+   3D CARDS & LIQUID GLASS EFFECT
+   ========================================================================== */
+.card-custom {
+  background: var(--glass-bg-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--glass-shadow);
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.4, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Dynamic Specular Sheen on Hover */
+.card-custom::after {
+  content: '';
+  position: absolute;
+  inset: -100%;
+  background: var(--liquid-sheen);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.6s ease;
+  transform: rotate(25deg) translateY(-80%);
+  z-index: 7;
+}
+
+.card-custom:hover::after {
+  opacity: 1;
+  transform: rotate(25deg) translateY(80%);
+}
+
+.card-custom:hover {
+  border-color: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--glass-shadow-hover);
+}
+
+/* 3D Depth inside card components */
+.food-card-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 205px;
+  overflow: hidden;
+  background-color: #e9ecef;
+  transform: translateZ(12px);
+  transform-style: preserve-3d;
+}
+
+.food-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.4, 1);
+}
+
+.card-custom:hover .food-card-img {
+  transform: scale(1.08) translateZ(8px);
+}
+
+/* ==========================================================================
+   SEMANTIC MULTI-HUE COLOR SYSTEM (Different Colors for Different Uses)
+   ========================================================================== */
+
+/* Liquid Glass Category Badges with Distinct Cuisine Colors */
+.badge-category {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #fff !important;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transform: translateZ(28px);
+  z-index: 4;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.2px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* 11 Cuisine Specific Colors */
+.badge-cat-pizza {
+  background: linear-gradient(135deg, #ff4757, #ff6b81) !important;
+  box-shadow: 0 4px 14px rgba(255, 71, 87, 0.5) !important;
+}
+.badge-cat-burger {
+  background: linear-gradient(135deg, #ffa502, #ff7f50) !important;
+  box-shadow: 0 4px 14px rgba(255, 165, 2, 0.5) !important;
+}
+.badge-cat-biryani {
+  background: linear-gradient(135deg, #ff7f50, #e67e22) !important;
+  box-shadow: 0 4px 14px rgba(255, 127, 80, 0.5) !important;
+}
+.badge-cat-north-indian {
+  background: linear-gradient(135deg, #d35400, #e67e22) !important;
+  box-shadow: 0 4px 14px rgba(211, 84, 0, 0.5) !important;
+}
+.badge-cat-south-indian {
+  background: linear-gradient(135deg, #2ed573, #00b894) !important;
+  box-shadow: 0 4px 14px rgba(46, 213, 115, 0.5) !important;
+}
+.badge-cat-chinese {
+  background: linear-gradient(135deg, #ee5253, #c23616) !important;
+  box-shadow: 0 4px 14px rgba(238, 82, 83, 0.5) !important;
+}
+.badge-cat-italian {
+  background: linear-gradient(135deg, #8854d0, #6c5ce7) !important;
+  box-shadow: 0 4px 14px rgba(136, 84, 208, 0.5) !important;
+}
+.badge-cat-snacks {
+  background: linear-gradient(135deg, #f39c12, #e67e22) !important;
+  box-shadow: 0 4px 14px rgba(243, 156, 18, 0.5) !important;
+}
+.badge-cat-healthy {
+  background: linear-gradient(135deg, #00cec9, #00b894) !important;
+  box-shadow: 0 4px 14px rgba(0, 206, 201, 0.5) !important;
+}
+.badge-cat-desserts {
+  background: linear-gradient(135deg, #fd79a8, #e84393) !important;
+  box-shadow: 0 4px 14px rgba(253, 121, 168, 0.5) !important;
+}
+.badge-cat-beverages {
+  background: linear-gradient(135deg, #0984e3, #74b9ff) !important;
+  box-shadow: 0 4px 14px rgba(9, 132, 227, 0.5) !important;
+}
+
+/* Liquid Glass Rating Badge */
+.badge-rating {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  color: #1e272e;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transform: translateZ(30px);
+  z-index: 4;
+}
+
+/* Veg / Non-Veg Badges with Distinct Colors & Ambient Glow */
+.badge-dietary {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 3px 8px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  transform: translateZ(30px);
+  z-index: 4;
+}
+
+.badge-dietary-veg {
+  background: rgba(235, 250, 242, 0.95);
+  border: 1.5px solid #2ed573;
+  color: #10ac84;
+  box-shadow: 0 4px 12px rgba(46, 213, 115, 0.3);
+}
+
+.badge-dietary-nonveg {
+  background: rgba(255, 238, 238, 0.95);
+  border: 1.5px solid #ff4757;
+  color: #ee5253;
+  box-shadow: 0 4px 12px rgba(255, 71, 87, 0.3);
+}
+
+.diet-icon-veg {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #2ed573;
+  padding: 1px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.diet-icon-veg::after {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #2ed573;
+  border-radius: 50%;
+  margin: 1px auto;
+}
+
+.diet-icon-nonveg {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #ff4757;
+  padding: 1px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.diet-icon-nonveg::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 7px solid #ff4757;
+  margin: 0 auto;
+}
+
+/* Favorite Heart Button */
+.btn-favorite {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transition: var(--transition);
+  z-index: 5;
+  transform: translateZ(32px);
+}
+
+.btn-favorite:hover {
+  background: #ffffff;
+  transform: translateZ(36px) scale(1.15);
+  box-shadow: 0 6px 16px rgba(255, 71, 87, 0.3);
+}
+
+.btn-favorite.active i {
+  color: #ff3838 !important;
+}
+
+/* Spice Heat Scale with Distinct Colors */
+.badge-spice-mild {
+  background: rgba(46, 213, 115, 0.12);
+  color: #10ac84;
+  border: 1px solid rgba(46, 213, 115, 0.35);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-pill);
+}
+
+.badge-spice-medium {
+  background: rgba(255, 165, 2, 0.12);
+  color: #e59400;
+  border: 1px solid rgba(255, 165, 2, 0.35);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-pill);
+}
+
+.badge-spice-spicy {
+  background: rgba(255, 71, 87, 0.12);
+  color: #ee5253;
+  border: 1px solid rgba(255, 71, 87, 0.35);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-pill);
+}
+
+/* Pure Veg Switch button */
+.veg-filter-btn {
+  border: 1px solid #2ed573;
+  background-color: #fff;
+  color: #2ed573;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  padding: 0.35rem 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.veg-filter-btn:hover, .veg-filter-btn.active {
+  background-color: #2ed573;
+  color: #fff;
+}
+
+.food-card-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.food-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--dark-color);
+}
+
+.food-desc {
+  font-size: 0.85rem;
+  color: var(--gray-dark);
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.food-meta-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.75rem;
+  color: var(--gray-dark);
+}
+
+.food-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.8rem;
+  border-top: 1px dashed var(--border-color);
+  margin-top: auto;
+}
+
+.food-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* Category Pills & Filters - 3D Liquid Glass */
+.category-card {
+  background: var(--glass-bg-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 1.2rem 0.6rem;
+  text-align: center;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.4, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  box-shadow: var(--glass-shadow);
+  transform-style: preserve-3d;
+  position: relative;
+  overflow: hidden;
+}
+
+.category-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.category-card:hover::after {
+  left: 100%;
+}
+
+.category-card:hover, .category-card.active {
+  border-color: rgba(255, 71, 87, 0.6);
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 16px 36px -10px rgba(255, 71, 87, 0.25), 0 8px 16px rgba(0, 0, 0, 0.06);
+}
+
+.category-card img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 0.6rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  transition: transform 0.4s ease;
+  transform: translateZ(20px);
+}
+
+.category-card:hover img {
+  transform: scale(1.1) translateZ(28px) rotate(4deg);
+}
+
+.category-card h6 {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--dark-color);
+  margin-bottom: 0;
+  transform: translateZ(15px);
+}
+
+.category-filter-pill {
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--gray-dark);
+  border-radius: var(--radius-pill);
+  padding: 0.45rem 1.15rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+  box-shadow: var(--shadow-sm), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+.category-filter-pill:hover {
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 71, 87, 0.15);
+}
+
+.category-filter-pill.active {
+  background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+  color: #fff;
+  border-color: transparent;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(255, 71, 87, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+}
+
+/* Quantity Selector - 3D Tactile */
+.quantity-control {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(241, 242, 246, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-pill);
+  padding: 0.25rem;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.quantity-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  color: var(--dark-color);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12), inset 0 1px 1px #fff;
+}
+
+.quantity-btn:hover {
+  background: linear-gradient(135deg, #ff4757, #ff6b81);
+  color: #fff;
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(255, 71, 87, 0.4);
+}
+
+.quantity-btn:active {
+  transform: scale(0.92);
+}
+
+.quantity-val {
+  min-width: 34px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+/* Order Tracking Progress Timeline - 3D Spheres & Luminous Rails */
+.tracking-timeline {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 3.5rem 0;
+}
+
+.tracking-timeline::before {
+  content: '';
+  position: absolute;
+  top: 26px;
+  left: 45px;
+  right: 45px;
+  height: 6px;
+  background: rgba(228, 231, 235, 0.7);
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.tracking-progress-bar {
+  position: absolute;
+  top: 26px;
+  left: 45px;
+  height: 6px;
+  background: linear-gradient(90deg, #2ed573, #2bcbba);
+  border-radius: 4px;
+  box-shadow: 0 0 12px rgba(46, 213, 115, 0.5);
+  z-index: 2;
+  transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.timeline-step {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 110px;
+}
+
+.timeline-step-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--glass-bg-solid);
+  backdrop-filter: var(--glass-blur);
+  border: 3px solid rgba(228, 231, 235, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--gray-light);
+  transition: var(--transition);
+  margin-bottom: 0.75rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08), inset 0 2px 2px #fff;
+}
+
+.timeline-step.completed .timeline-step-icon {
+  background: radial-gradient(circle at 35% 35%, #55efc4, #2ed573 80%);
+  border-color: #2ed573;
+  color: #ffffff;
+  box-shadow: 0 8px 22px rgba(46, 213, 115, 0.45), inset 0 2px 4px rgba(255, 255, 255, 0.8);
+  transform: scale(1.05);
+}
+
+.timeline-step.active .timeline-step-icon {
+  background: radial-gradient(circle at 35% 35%, #ff7675, #ff4757 80%);
+  border-color: #fff;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(255, 71, 87, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.8);
+  animation: pulseIcon3D 1.8s infinite;
+  transform: scale(1.12);
+}
+
+/* 5-Stage Order Tracking Distinct Milestone Colors */
+#step-placed.active .timeline-step-icon {
+  background: radial-gradient(circle at 35% 35%, #74b9ff, #0984e3 80%);
+  border-color: #fff;
+  box-shadow: 0 10px 25px rgba(9, 132, 227, 0.55), inset 0 2px 4px rgba(255, 255, 255, 0.8);
+  animation: pulseIconPlaced 1.8s infinite;
+}
+
+#step-confirmed.active .timeline-step-icon {
+  background: radial-gradient(circle at 35% 35%, #a29bfe, #6c5ce7 80%);
+  border-color: #fff;
+  box-shadow: 0 10px 25px rgba(108, 92, 231, 0.55), inset 0 2px 4px rgba(255, 255, 255, 0.8);
+  animation: pulseIconConfirmed 1.8s infinite;
+}
+
+#step-preparing.active .timeline-step-icon {
+  background: radial-gradient(circle at 35% 35%, #f39c12, #e67e22 80%);
+  border-color: #fff;
+  box-shadow: 0 10px 25px rgba(230, 126, 34, 0.55), inset 0 2px 4px rgba(255, 255, 255, 0.8);
+  animation: pulseIconPreparing 1.8s infinite;
+}
+
+#step-delivery.active .timeline-step-icon {
+  background: radial-gradient(circle at 35% 35%, #00cec9, #00b894 80%);
+  border-color: #fff;
+  box-shadow: 0 10px 25px rgba(0, 206, 201, 0.55), inset 0 2px 4px rgba(255, 255, 255, 0.8);
+  animation: pulseIconDelivery 1.8s infinite;
+}
+
+#step-delivered.completed .timeline-step-icon,
+#step-delivered.active .timeline-step-icon {
+  background: radial-gradient(circle at 35% 35%, #55efc4, #2ed573 80%);
+  border-color: #2ed573;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(46, 213, 115, 0.55), inset 0 2px 4px rgba(255, 255, 255, 0.8);
+  animation: pulseIconDelivered 2s infinite;
+}
+
+.timeline-step-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--gray-dark);
+}
+
+.timeline-step.completed .timeline-step-label,
+.timeline-step.active .timeline-step-label {
+  color: var(--dark-color);
+  font-weight: 700;
+}
+
+@keyframes pulseIcon3D {
+  0% { box-shadow: 0 0 0 0 rgba(255, 71, 87, 0.5), 0 8px 20px rgba(255, 71, 87, 0.3); }
+  70% { box-shadow: 0 0 0 14px rgba(255, 71, 87, 0), 0 8px 20px rgba(255, 71, 87, 0.3); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 71, 87, 0), 0 8px 20px rgba(255, 71, 87, 0.3); }
+}
+
+@keyframes pulseIconPlaced {
+  0% { box-shadow: 0 0 0 0 rgba(9, 132, 227, 0.55), 0 8px 20px rgba(9, 132, 227, 0.3); }
+  70% { box-shadow: 0 0 0 14px rgba(9, 132, 227, 0), 0 8px 20px rgba(9, 132, 227, 0.3); }
+  100% { box-shadow: 0 0 0 0 rgba(9, 132, 227, 0), 0 8px 20px rgba(9, 132, 227, 0.3); }
+}
+
+@keyframes pulseIconConfirmed {
+  0% { box-shadow: 0 0 0 0 rgba(108, 92, 231, 0.55), 0 8px 20px rgba(108, 92, 231, 0.3); }
+  70% { box-shadow: 0 0 0 14px rgba(108, 92, 231, 0), 0 8px 20px rgba(108, 92, 231, 0.3); }
+  100% { box-shadow: 0 0 0 0 rgba(108, 92, 231, 0), 0 8px 20px rgba(108, 92, 231, 0.3); }
+}
+
+@keyframes pulseIconPreparing {
+  0% { box-shadow: 0 0 0 0 rgba(230, 126, 34, 0.55), 0 8px 20px rgba(230, 126, 34, 0.3); }
+  70% { box-shadow: 0 0 0 14px rgba(230, 126, 34, 0), 0 8px 20px rgba(230, 126, 34, 0.3); }
+  100% { box-shadow: 0 0 0 0 rgba(230, 126, 34, 0), 0 8px 20px rgba(230, 126, 34, 0.3); }
+}
+
+@keyframes pulseIconDelivery {
+  0% { box-shadow: 0 0 0 0 rgba(0, 206, 201, 0.55), 0 8px 20px rgba(0, 206, 201, 0.3); }
+  70% { box-shadow: 0 0 0 14px rgba(0, 206, 201, 0), 0 8px 20px rgba(0, 206, 201, 0.3); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 206, 201, 0), 0 8px 20px rgba(0, 206, 201, 0.3); }
+}
+
+@keyframes pulseIconDelivered {
+  0% { box-shadow: 0 0 0 0 rgba(46, 213, 115, 0.55), 0 8px 20px rgba(46, 213, 115, 0.3); }
+  70% { box-shadow: 0 0 0 14px rgba(46, 213, 115, 0), 0 8px 20px rgba(46, 213, 115, 0.3); }
+  100% { box-shadow: 0 0 0 0 rgba(46, 213, 115, 0), 0 8px 20px rgba(46, 213, 115, 0.3); }
+}
+
+/* Real-Time Live Status Pulse Indicator */
+.pulse-dot {
+  display: inline-block;
+  animation: pulseDotAnim 1.6s infinite ease-in-out;
+}
+
+@keyframes pulseDotAnim {
+  0% { transform: scale(0.95); opacity: 0.6; }
+  50% { transform: scale(1.25); opacity: 1; filter: drop-shadow(0 0 4px #2ed573); }
+  100% { transform: scale(0.95); opacity: 0.6; }
+}
+
+/* ================= SEMANTIC ORDER STATUS PILLS ================= */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-pill);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  letter-spacing: 0.2px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.status-badge:hover {
+  transform: translateY(-1px);
+}
+
+.status-placed {
+  background: rgba(9, 132, 227, 0.12) !important;
+  color: #0984e3 !important;
+  border: 1px solid rgba(9, 132, 227, 0.35) !important;
+  box-shadow: 0 2px 10px rgba(9, 132, 227, 0.15) !important;
+}
+
+.status-confirmed {
+  background: rgba(108, 92, 231, 0.12) !important;
+  color: #6c5ce7 !important;
+  border: 1px solid rgba(108, 92, 231, 0.35) !important;
+  box-shadow: 0 2px 10px rgba(108, 92, 231, 0.15) !important;
+}
+
+.status-preparing {
+  background: rgba(230, 126, 34, 0.12) !important;
+  color: #d35400 !important;
+  border: 1px solid rgba(230, 126, 34, 0.35) !important;
+  box-shadow: 0 2px 10px rgba(230, 126, 34, 0.15) !important;
+}
+
+.status-delivery {
+  background: rgba(0, 206, 201, 0.12) !important;
+  color: #0097a7 !important;
+  border: 1px solid rgba(0, 206, 201, 0.35) !important;
+  box-shadow: 0 2px 10px rgba(0, 206, 201, 0.15) !important;
+}
+
+.status-delivered {
+  background: rgba(46, 213, 115, 0.12) !important;
+  color: #10ac84 !important;
+  border: 1px solid rgba(46, 213, 115, 0.35) !important;
+  box-shadow: 0 2px 10px rgba(46, 213, 115, 0.15) !important;
+}
+
+.status-cancelled {
+  background: rgba(255, 71, 87, 0.12) !important;
+  color: #ee5253 !important;
+  border: 1px solid rgba(255, 71, 87, 0.35) !important;
+  box-shadow: 0 2px 10px rgba(255, 71, 87, 0.15) !important;
+}
+
+/* ================= ACTION BUTTON COLOR HIERARCHY ================= */
+.btn-action-view {
+  color: #0984e3 !important;
+  background: rgba(9, 132, 227, 0.08) !important;
+  border: 1.5px solid rgba(9, 132, 227, 0.4) !important;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  transition: var(--transition);
+}
+
+.btn-action-view:hover {
+  background: linear-gradient(135deg, #0984e3, #74b9ff) !important;
+  color: #ffffff !important;  
+  border-color: transparent !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(9, 132, 227, 0.35);
+}
+
+.btn-action-invoice {
+  color: #2f3542 !important;
+  background: rgba(47, 53, 66, 0.08) !important;
+  border: 1.5px solid rgba(47, 53, 66, 0.3) !important;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  transition: var(--transition);
+}
+
+.btn-action-invoice:hover {
+  background: linear-gradient(135deg, #2f3542, #57606f) !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(47, 53, 66, 0.3);
+}
+
+/* Toast Notifications - Frosted Glass */
+#toast-container {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.custom-toast {
+  pointer-events: auto;
+  min-width: 300px;
+  max-width: 380px;
+  padding: 0.95rem 1.35rem;
+  border-radius: var(--radius-md);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  animation: slideInRight 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.custom-toast.toast-success { background: rgba(46, 213, 115, 0.88); }
+.custom-toast.toast-danger { background: rgba(255, 71, 87, 0.88); }
+.custom-toast.toast-info { background: rgba(30, 144, 255, 0.88); }
+.custom-toast.toast-warning { background: rgba(255, 165, 2, 0.92); color: #1e272e; }
+
+/* Modals & Dropdown Menus - 3D Liquid Glass */
+.modal-content {
+  background: var(--glass-bg-solid) !important;
+  backdrop-filter: var(--glass-blur-deep) !important;
+  -webkit-backdrop-filter: var(--glass-blur-deep) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.9) !important;
+}
+
+.dropdown-menu {
+  background: var(--glass-bg-solid) !important;
+  backdrop-filter: var(--glass-blur) !important;
+  -webkit-backdrop-filter: var(--glass-blur) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12), inset 0 1px 1px rgba(255, 255, 255, 0.9) !important;
+}
+
+.dropdown-item {
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+}
+
+.dropdown-item:hover {
+  background: rgba(255, 71, 87, 0.1);
+  color: var(--primary-color);
+  transform: translateX(4px);
+}
+
+/* Stat Cards - 3D Liquid Glass with Ambient Glow */
+.stat-card {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  padding: 1.6rem;
+  box-shadow: var(--glass-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.4, 1), box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: var(--glass-shadow-hover);
+  border-color: rgba(255, 255, 255, 0.95);
+}
+
+.stat-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1), inset 0 1px 2px rgba(255, 255, 255, 0.8);
+  transform: translateZ(20px);
+}
+
+/* Printable Tax Invoice Styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printableInvoice, #printableInvoice * {
+    visibility: visible;
+  }
+  #printableInvoice {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #1e272e;
+  color: #a4b0be;
+  padding: 3.5rem 0 1.5rem;
+  margin-top: 4rem;
+}
+
+footer h5 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
+footer a {
+  color: #a4b0be;
+}
+
+footer a:hover {
+  color: var(--primary-color);
+}
+
+.footer-bottom {
+  border-top: 1px solid #2f3542;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) { 
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .tracking-timeline {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .tracking-timeline::before, .tracking-progress-bar {
+    display: none;
+  }
+  .timeline-step {
+    flex-direction: row;
+    width: 100%;
+    text-align: left;
+    gap: 1rem;
+  }
+  .admin-sidebar {
+    min-height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+}

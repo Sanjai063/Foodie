@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | FoodieBites</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light">
+
+  <div id="navbar-placeholder"></div>
+
+  <main class="py-5">
+    <div class="container">
+      <div class="mb-4">
+        <h2 class="fw-bold mb-1">Secure Checkout</h2>
+        <p class="text-muted mb-0">Provide delivery details & choose your preferred payment method</p>
+      </div>
+
+      <form id="checkoutForm">
+        <div class="row g-4">
+          <!-- Left Column: Delivery & Payment Details -->
+          <div class="col-lg-8">
+            <!-- 1. Delivery Details Card -->
+            <div class="card-custom rounded-4 p-4 p-md-5 mb-4">
+              <h5 class="fw-bold mb-4 d-flex align-items-center gap-2">
+                <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center" style="width: 28px; height: 28px; font-size: 0.85rem;">1</span>
+                Delivery Address
+              </h5>
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="customerName" class="form-label small fw-semibold">Recipient Full Name *</label>
+                  <input type="text" class="form-control" id="customerName" placeholder="John Doe" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="customerPhone" class="form-label small fw-semibold">Contact Phone Number *</label>
+                  <input type="tel" class="form-control" id="customerPhone" placeholder="9876543210" pattern="[0-9]{10}" required>
+                </div>
+
+                <div class="col-12">
+                  <label for="deliveryAddress" class="form-label small fw-semibold">Street Address / House No. / Landmark *</label>
+                  <input type="text" class="form-control" id="deliveryAddress" placeholder="e.g. Flat 302, Sunrise Towers, 5th Cross" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="deliveryCity" class="form-label small fw-semibold">City *</label>
+                  <input type="text" class="form-control" id="deliveryCity" placeholder="Bengaluru" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="deliveryPincode" class="form-label small fw-semibold">Pincode *</label>
+                  <input type="text" class="form-control" id="deliveryPincode" placeholder="560001" required>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Payment Method Card -->
+            <div class="card-custom rounded-4 p-4 p-md-5">
+              <h5 class="fw-bold mb-4 d-flex align-items-center gap-2">
+                <span class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center" style="width: 28px; height: 28px; font-size: 0.85rem;">2</span>
+                Payment Options
+              </h5>
+
+              <div class="row g-3">
+                <!-- Cash on Delivery -->
+                <div class="col-md-6">
+                  <label class="card h-100 p-3 rounded-3 cursor-pointer" style="cursor: pointer; background: rgba(255, 255, 255, 0.7); border: 1px solid rgba(255, 255, 255, 0.9);">
+                    <div class="d-flex align-items-center gap-3">
+                      <input type="radio" name="paymentMethod" id="payCOD" value="Cash on Delivery" class="form-check-input mt-0" checked>
+                      <div>
+                        <h6 class="mb-0 fw-bold"><i class="bi bi-cash-stack text-success me-1"></i> Cash on Delivery</h6>
+                        <small class="text-muted">Pay in cash or UPI when your food arrives</small>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <!-- Demo Online Payment -->
+                <div class="col-md-6">
+                  <label class="card h-100 p-3 rounded-3 cursor-pointer" style="cursor: pointer; background: rgba(255, 255, 255, 0.7); border: 1px solid rgba(255, 255, 255, 0.9);">
+                    <div class="d-flex align-items-center gap-3">
+                      <input type="radio" name="paymentMethod" id="payOnline" value="Demo Online Payment" class="form-check-input mt-0">
+                      <div>
+                        <h6 class="mb-0 fw-bold"><i class="bi bi-credit-card text-primary me-1"></i> Demo Online Payment</h6>
+                        <small class="text-muted">Simulated instant card or UPI checkout</small>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Demo Online Payment simulated fields -->
+              <div id="onlinePaymentDetails" class="card bg-light border-0 rounded-3 p-3 mt-3 d-none">
+                <div class="alert alert-info py-2 px-3 small rounded-2 mb-3">
+                  <i class="bi bi-info-circle me-1"></i> <strong>College Demo Mode:</strong> No real bank charges will occur. Any test card number works!
+                </div>
+                <div class="row g-2">
+                  <div class="col-md-8">
+                    <label class="form-label small fw-semibold">Demo Card Number</label>
+                    <input type="text" class="form-control form-control-sm" placeholder="4111 2222 3333 4444" value="4111 2222 3333 4444">
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label small fw-semibold">CVV</label>
+                    <input type="password" class="form-control form-control-sm" placeholder="123" value="123" maxlength="3">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right Column: Order Review & Submit -->
+          <div class="col-lg-4">
+            <div class="card-custom rounded-4 p-4 sticky-top" style="top: 90px;">
+              <h5 class="fw-bold mb-3 border-bottom pb-2">Order Items</h5>
+
+              <!-- Items list preview -->
+              <div id="checkoutItemsContainer" class="mb-3 max-h-200 overflow-auto" style="max-height: 220px;">
+                <!-- Dynamically populated -->
+              </div>
+
+              <hr class="my-2">
+
+              <div class="d-flex justify-content-between mb-2">
+                <span class="text-muted small">Subtotal</span>
+                <span class="fw-semibold small" id="checkoutSubtotal">₹0</span>
+              </div>
+
+              <div class="d-flex justify-content-between mb-2">
+                <span class="text-muted small">Delivery Fee</span>
+                <span class="fw-semibold small" id="checkoutDeliveryFee">₹40</span>
+              </div>
+
+              <div class="d-flex justify-content-between mb-2">
+                <span class="text-muted small">Taxes (5% GST)</span>
+                <span class="fw-semibold small" id="checkoutTax">₹0</span>
+              </div>
+
+              <hr class="my-3">
+
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <span class="fw-bold fs-5">To Pay</span>
+                <span class="fw-bold fs-4 text-primary" id="checkoutTotal">₹0</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg btn-pill w-100 shadow-sm" id="placeOrderBtn">
+                <i class="bi bi-shield-check me-2"></i>Place Order Now
+              </button>
+
+              <div class="text-center mt-3">
+                <small class="text-muted"><i class="bi bi-shield-lock text-success me-1"></i> Safe & Secure 256-bit encrypted checkout</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

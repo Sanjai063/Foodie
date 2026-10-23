@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Categories | FoodieBites Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-light">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-2 col-md-3 p-0">
+        <div class="admin-sidebar" id="adminSidebar"></div>
+      </div>
+
+      <div class="col-lg-10 col-md-9 p-4 p-md-5">
+        <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom">
+          <div>
+            <h3 class="fw-bold mb-1">Food Categories</h3>
+            <p class="text-muted mb-0">Organize your menu into delicious cuisine sections and groups</p>
+          </div>
+          <button class="btn btn-primary btn-pill" data-bs-toggle="modal" data-bs-target="#addCategoryModal">
+            <i class="bi bi-plus-lg me-1"></i> Add Category
+          </button>
+        </div>
+
+        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+          <div class="table-responsive">
+            <table class="table align-middle table-hover">
+              <thead class="table-light">
+                <tr>
+                  <th>Thumbnail</th>
+                  <th>Category Name</th>
+                  <th>Description</th>
+                  <th>Items Count</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="categoriesTableBody">
+                <!-- Dynamically loaded -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Category Modal -->
+  <div class="modal fade" id="addCategoryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4 border-0 shadow">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold">Create Food Category</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="addCategoryForm">
+          <div class="modal-body p-4">
+            <div class="mb-3">
+              <label for="categoryName" class="form-label small fw-semibold">Category Name *</label>
+              <input type="text" class="form-control" id="categoryName" placeholder="e.g. Pasta" required>
+            </div>
+            <div class="mb-3">
+              <label for="categoryImage" class="form-label small fw-semibold">Image URL *</label>
+              <input type="url" class="form-control" id="categoryImage" placeholder="https://images.unsplash.com/..." required>
+            </div>
+            <div class="mb-3">
+              <label for="categoryDescription" class="form-label small fw-semibold">Short Description</label>
+              <textarea class="form-control" id="categoryDescription" rows="2" placeholder="Brief summary of this cuisine..."></textarea>
+            </div>
+          </div>
+          <div class="modal-footer border-0 pt-0">
+            <button type="button" class="btn btn-light btn-pill btn-sm" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary btn-pill btn-sm px-4">Create</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Category Modal -->
+  <div class="modal fade" id="editCategoryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4 border-0 shadow">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold">Edit Category</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="editCategoryForm">
+          <input type="hidden" id="editCategoryId">
+          <div class="modal-body p-4">
+            <div class="mb-3">
+              <label for="editCategoryName" class="form-label small fw-semibold">Category Name *</label>
+              <input type="text" class="form-control" id="editCategoryName" required>
+            </div>
+            <div class="mb-3">
+              <label for="editCategoryImage" class="form-label small fw-semibold">Image URL *</label>
+              <input type="url" class="form-control" id="editCategoryImage" required>
+            </div>
+            <div class="mb-3">
+              <label for="editCategoryDescription" class="form-label small fw-semibold">Short Description</label>
+              <textarea class="form-control" id="editCategoryDescription" rows="2"></textarea>
+            </div>
+          </div>
+          <div class="modal-footer border-0 pt-0">
+            <button type="button" class="btn btn-light btn-pill btn-sm" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary btn-pill btn-sm px-4">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/config.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/admin.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', initCategoriesManagement);
+  </script>
+</body>
+</html>

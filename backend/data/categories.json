@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Pizza",
+    "description": "Authentic stone-baked pizzas with hand-stretched crusts and premium mozzarella.",
+    "image": "/images/foods/1-classic-margherita-pizza.jpg"
+  },
+  {
+    "name": "Burger",
+    "description": "Juicy, artisanal gourmet burgers stacked with fresh patties, cheese, and crisp veggies.",
+    "image": "/images/foods/7-classic-grilled-chicken-cheeseburger.jpg"
+  },
+  {
+    "name": "Biryani",
+    "description": "Fragrant aged basmati rice layered with aromatic whole spices and slow-cooked to perfection.",
+    "image": "/images/foods/9-hyderabadi-chicken-dum-biryani.jpg"
+  },
+  {
+    "name": "North Indian",
+    "description": "Rich royal gravies, soft tandoori breads, and fragrant authentic Mughlai curries.",
+    "image": "/images/foods/11-paneer-butter-masala.jpg"
+  },
+  {
+    "name": "South Indian",
+    "description": "Crispy golden dosas, fluffy steamed idlis, spicy gunpowders, and aromatic sambar.",
+    "image": "/images/foods/17-pure-ghee-paper-roast-dosa.jpg"
+  },
+  {
+    "name": "Chinese",
+    "description": "Wok-tossed noodles, crunchy sizzling appetizers, dumplings, and spicy Sichuan bowls.",
+    "image": "/images/foods/19-schezwan-hakka-noodles.jpg"
+  },
+  {
+    "name": "Italian",
+    "description": "Handmade fresh pastas in silky white and tangy arrabbiata sauces, garlic breads, and lasagnas.",
+    "image": "/images/foods/24-fiery-arrabbiata-red-sauce-pasta.jpg"
+  },
+  {
+    "name": "Snacks & Street Food",
+    "description": "Mumbai pav bhaji, loaded peri-peri fries, crunchy chaats, and golden fried bites.",
+    "image": "/images/foods/27-mumbai-special-pav-bhaji.jpg"
+  },
+  {
+    "name": "Healthy & Salads",
+    "description": "Nutrient-rich power salads, quinoa bowls, fresh greens, and low-calorie gourmet treats.",
+    "image": "/images/foods/30-mediterranean-greek-feta-salad.jpg"
+  },
+  {
+    "name": "Desserts",
+    "description": "Molten chocolate lava cakes, royal gulab jamuns, cheesecakes, and creamy sundaes.",
+    "image": "/images/foods/33-gulab-jamun-with-creamy-rabri.jpg"
+  },
+  {
+    "name": "Beverages",
+    "description": "Chilled artisanal mocktails, thick shakes, cold coffees, and refreshing coolers.",
+    "image": "/images/foods/36-belgian-chocolate-milkshake.jpg"
+  }
+]
